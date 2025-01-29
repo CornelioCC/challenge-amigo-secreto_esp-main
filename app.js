@@ -20,3 +20,14 @@ function actualizarLista(){
         lista.innerHTML += `<li>${amigos[i]}<li><br>`;
     }
 }
+
+function sortearAmigo() {
+    if(amigos.length > 0){
+        let numeroAleatorio = Math.floor(Math.random() * (amigos.length));
+        let listaResultado = document.getElementById('resultado');
+        listaResultado.innerHTML = `<li>${amigos[numeroAleatorio]}</li>`;
+    }else{
+        alert("Aun no has agregado amigos");
+    }
+    
+}
