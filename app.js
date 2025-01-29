@@ -8,5 +8,15 @@ function agregarAmigo() {
     }else{
         amigos.push(campo);
         document.getElementById('amigo').value = "";
+        actualizarLista();
+    }
+}
+
+function actualizarLista(){
+    let lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
+    let i;
+    for(i = 0; i <= amigos.length - 1; i++){
+        lista.innerHTML += `<li>${amigos[i]}<li><br>`;
     }
 }
